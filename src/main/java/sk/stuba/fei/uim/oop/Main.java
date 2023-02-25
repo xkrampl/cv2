@@ -1,18 +1,30 @@
 package sk.stuba.fei.uim.oop;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner klavesnica = new Scanner(System.in);
-        System.out.println("Hello world");
+        // Scanner klavesnica = new Scanner(System.in);
 
-        String a = "a";
-        String b = "a";
+        int x = 5;
+        int[] y = new int[]{1, 2, 3};
 
-        System.out.println("Zadaj pismeno: ");
-        String c = klavesnica.nextLine();
+        System.out.println(x);
+        testPrimitive(x);
+        System.out.println(x);
 
-        System.out.println(a.equals(c));
+        System.out.println(Arrays.toString(y));
+        testPole(y);
+        System.out.println(Arrays.toString(y));
+    }
+
+    private static void testPole(int[] y) {
+        y[0] = 50;
+        System.out.println(Arrays.toString(y));
+    }
+
+    public static void testPrimitive(int cislo) {
+        cislo = 10;
+        System.out.println(cislo);
     }
 }
